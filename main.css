@@ -2,8 +2,8 @@ body,
 html {
   margin: 0;
   padding: 0;
-  width: 100vw;
-  height: 100%;
+  width: 100%;
+  /* height: 100%; */
 }
 
 body {
@@ -11,7 +11,6 @@ body {
   font-size: 12px;
   color: #424242;
   width: 100%;
-  overflow-x: hidden;
 }
 
 h1,
@@ -62,6 +61,7 @@ ul {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
   min-height: 56px;
   transition: min-height 0.3s;
+  padding: 5px;
   width: 100%;
 }
 
@@ -95,7 +95,8 @@ ul {
 }
 
 .header__title {
-  font-weight: 400;
+  font-family: "Times New Roman", serif;
+  font-weight: 600;
   align-self: flex-end;
   font-size: 2em;
   color: #212121;
@@ -122,8 +123,9 @@ ul {
  */
 
 .nav {
-  width: 287px;
-  position: absolute;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  width: 257px;
+  position: fixed;
   z-index: 1;
   transform: translate(100vw, 0);
   transition: transform 0.3s ease;
@@ -131,28 +133,29 @@ ul {
 }
 
 .nav.open {
-  transform: translate(calc(100vw - 300px), 0);
+  position: absolute;
+  transform: translate(calc(100vw - 260px), 0);
 }
 
 .nav__list {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .nav__item {
   box-sizing: border-box;
   display: inline-block;
-  /* width: 24%; */
-  /* text-align: center; */
   line-height: 48px;
   text-transform: uppercase;
+  padding-left: 20px;
   /* background: pink; */
 }
 
 .nav a {
   text-decoration: none;
+  font-weight: 500;
   color: #616161;
   padding: 1.5em;
 }
@@ -172,7 +175,7 @@ ul {
 main {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   margin-left: auto;
   margin-right: auto;
 }
@@ -468,5 +471,31 @@ footer a {
 @media screen and (min-width: 500px) and (max-width: 599px) {
   .header__title {
     font-size: 3em;
+  }
+}
+
+@media screen and (min-width: 700px){
+  .hero {
+    width: 60%;
+  }
+
+  .top-news {
+    width: 40%;
+    position: relative;
+  }
+
+  .weather {
+    width: 40%;
+  }
+
+  .scores {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  html, body {
+    width: 850px;
+    margin: auto;
   }
 }
